@@ -6,7 +6,8 @@ require "json"
 class Qtest
   # Your code goes here...
   $projectid = 0 #your project Id
- 
+  $qtesturl
+  $id = 0
 	def QtestPostTestResult (name,runid,failMessage) 
 
 	    startdate = DateTime.now 
@@ -19,7 +20,7 @@ class Qtest
 
 	    response = RestClient::Request.execute(
 	      method: :post, 
-	      url: "https://mobiquity.qtestnet.com/api/v3/projects/#$projectid/test-runs/#$id/auto-test-logs",
+	      url: "#$qtesturl/api/v3/projects/#$projectid/test-runs/#$id/auto-test-logs",
 	      payload:{                 
 	          "name" => name,   
 	          "automation_content" => "sample-demo-api-AutomationTestLog",   
