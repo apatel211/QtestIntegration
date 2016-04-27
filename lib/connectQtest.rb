@@ -10,7 +10,7 @@ module  Qtest
   $qtesturl #your qtest url
   $authkey #your Qtest authorization
  
-	def QtestPostTestResult (name,runid,failMessage) 
+	def Qtest.QtestPostTestResult (name,runid,failMessage) 
 
 	    startdate = DateTime.now 
 	    enddate = DateTime.now 
