@@ -3,11 +3,13 @@ require "rest-client"
 require "oauth"
 require "json"
 
-class Qtest
+module  Qtest
   # Your code goes here...
   $projectid = 0 #your project Id
-  $qtesturl
   $id = 0
+  $qtesturl #your qtest url
+  $authkey #your Qtest authorization
+ 
 	def QtestPostTestResult (name,runid,failMessage) 
 
 	    startdate = DateTime.now 
@@ -34,7 +36,7 @@ class Qtest
 	            "Content-Type"=> "application/json",
 	            "Cache-Control" => "no-cache",
 	            "verify_ssl" => "OpenSSL::SSL::VERIFY_NONE",
-	            "Authorization" => "bW9iaXF1aXR5fGFwYXRlbEBtb2JpcXVpdHlpbmMuY29tOjE0NzkyNzUyNjU4OTc6ZGQ3YTMyOWVhMTA0NzhjMzU2NzFmNmNiNjM4YTI4ZDI"
+	            "Authorization" => "#$authkey"
 	        }
 	    )
 
