@@ -22,7 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+ This gem is for run qtest testcases using automation script, for that you need belows things to add in your file.
+ 
+  $projectid = #your project Id, you will get from qtest
+  
+  $id = $runid = TestrunID - whatever testcase you want to execute
+  
+  $qtesturl #your qtest url, you will get from qtest
+  
+  $authkey #your Qtest authorization, you will get from qtest
+ 
+ Call this function in your file/method 
+ 
+  Qtest.QtestPostTestResult (name,runid,failMessage)
 
 ## Development
 
